@@ -5,13 +5,18 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className='flex items-center justify-between border-b border-gray-400 py-8 mx-3'>
+    <nav className='flex items-center justify-between border-b border-gray-400 py-8 mx-3'>
       <a href='/'>
-        <p className='text-2xl'>Xaniven.eth</p>
+        <p className='lgWrap text-2xl ml-5 '>
+          <span className='lgSpan'>Hi, I'm Kody! 🙋🏽‍♂️</span>
+        </p>
       </a>
-      <nav>
+      <div>
         <section className='MOBILE-MENU flex lg:hidden'>
-          <div className='HAMBURGER-ICON space-y-2' onClick={() => setIsNavOpen((prev) => !prev)}>
+          <div
+            className='HAMBURGER-ICON space-y-2 mr-5'
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
             <span className='block h-0.5 w-8 animate-pulse bg-gray-800'></span>
             <span className='block h-0.5 w-8 animate-pulse bg-gray-800'></span>
             <span className='block h-0.5 w-8 animate-pulse bg-gray-800'></span>
@@ -34,30 +39,58 @@ export default function Navbar() {
             </div>
             <ul className='flex flex-col items-center justify-between min-h-[250px]'>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a href='/about'>About ME! 🧙🏽‍♂️</a>
+                <a href='/about'>
+                  <span className='hover:bg-white p-2 rounded-lg'>About Me! 🧙🏽‍♂️</span>
+                </a>
               </li>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a href='/portfolio'>Portfolio 💼</a>
+                <a href='/portfolio'>
+                  <span className='hover:bg-white p-2 rounded-lg'>Portfolio 💼</span>
+                </a>
               </li>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a href='/contact'>Contact 📱</a>
+                <a href='/contact'>
+                  <span className='hover:bg-white p-2 rounded-lg'> Contact 📱</span>
+                </a>
               </li>
             </ul>
           </div>
         </section>
 
-        <ul className='DESKTOP-MENU hidden space-x-8 lg:flex'>
+        <ul className='DESKTOP-MENU hidden space-x-8 lg:flex mr-5'>
           <li>
-            <a href='/about'>About ME! 🧙🏽‍♂️ </a>
+            <a href='/about'>
+              {" "}
+              <button
+                href='/contact'
+                className='contact-button bg-white hover:bg-gray-600 rounded-2xl border-black border-2 p-2'
+              >
+                About Me! 🧙🏽‍♂️
+              </button>{" "}
+            </a>
           </li>
           <li>
-            <a href='/portfolio'>Portfolio 💼</a>
+            <a href='/portfolio'>
+              <button
+                href='/contact'
+                className='contact-button bg-white hover:bg-gray-600 rounded-2xl border-black border-2 p-2'
+              >
+                Portfolio 💼
+              </button>
+            </a>
           </li>
           <li>
-            <a href='/contact'>Contact 📱</a>
+            <a href='/contact'>
+              <button
+                href='/contact'
+                className='contact-button bg-white hover:bg-gray-600 rounded-2xl border-black border-2 p-2'
+              >
+                Contact 📱
+              </button>
+            </a>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }

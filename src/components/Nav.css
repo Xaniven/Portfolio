@@ -1,17 +1,27 @@
 .hideMenuNav {
-    display: none;
-  }
-  .showMenuNav {
-    display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-  }
+  display: none;
+}
+.showMenuNav {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #7b6863;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.lgWrap:hover .lgSpan {
+  display: none;
+  transition-duration: 5s;
+}
+
+.lgWrap:hover::before {
+  content: "On the interwebs i go by Xaniven.eth";
+  transition-duration: 5s;
+}
