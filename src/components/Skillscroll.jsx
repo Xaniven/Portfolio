@@ -9,7 +9,7 @@ import img6 from "../imgs/framer.svg";
 
 export default function Skillscroll() {
   return (
-    <div>
+    <div className='container'>
       <div class='slider'>
         <div class='slide-track'>
           <div class='slide mx-20 my-10'>
