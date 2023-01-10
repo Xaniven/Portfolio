@@ -1,5 +1,6 @@
 import React, { useState, Suspense } from "react";
 import "./App.css";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -17,6 +18,8 @@ function App() {
         <Contact />
         <About />
       </div>
+
+      <Footer />
     </>
   );
 }
