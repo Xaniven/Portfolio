@@ -4,22 +4,25 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-const Spline = React.lazy(() => import("@splinetool/react-spline"));
+import Spline from "@splinetool/react-spline";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <AnimatePresence>
+        <Navbar />
 
-      <div className='App '>
-        <div className='spWrap mx-10'>
-          {/* <Spline scene='https://prod.spline.design/HGoqdPfSiSFgN1L2/scene.splinecode' /> */}
+        <div className='App '>
+          <div className='flex justify-center items-center spWrap w-[75vw] mt-2'>
+            {/* <Spline scene='https://prod.spline.design/HGoqdPfSiSFgN1L2/scene.splinecode' /> */}
+          </div>
+          <Contact />
+          <About />
         </div>
-        <Contact />
-        <About />
-      </div>
 
-      <Footer />
+        <Footer />
+      </AnimatePresence>
     </>
   );
 }

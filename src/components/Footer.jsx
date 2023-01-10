@@ -1,5 +1,5 @@
 import React from "react";
-import { TfiTwitter, TfiInstagram, TfiCommentAlt, TfiInfoAlt } from "react-icons/tfi";
+import { TfiTwitter, TfiInstagram, TfiCommentAlt } from "react-icons/tfi";
 import { motion } from "framer-motion";
 import "./footer.scss";
 
@@ -38,7 +38,7 @@ export default function Footer() {
           <div className='imgWrap'>
             <TfiCommentAlt />
           </div>
-          <h5>Contact Me</h5>
+          <h5>Contact Me </h5>
         </motion.div>
       </div>
     </>

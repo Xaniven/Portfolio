@@ -63,7 +63,7 @@ export default function Navbar() {
               {" "}
               <button
                 href='/contact'
-                className='contact-button bg-white hover:bg-gray-600 rounded-2xl border-black border-2 p-2'
+                className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'
               >
                 About Me! 🧙🏽‍♂️
               </button>{" "}
@@ -73,7 +73,7 @@ export default function Navbar() {
             <a href='/portfolio'>
               <button
                 href='/contact'
-                className='contact-button bg-white hover:bg-gray-600 rounded-2xl border-black border-2 p-2'
+                className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'
               >
                 Portfolio 💼
               </button>
@@ -83,7 +83,7 @@ export default function Navbar() {
             <a href='/contact'>
               <button
                 href='/contact'
-                className='contact-button bg-white hover:bg-gray-600 rounded-2xl border-black border-2 p-2'
+                className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'
               >
                 Contact 📱
               </button>
