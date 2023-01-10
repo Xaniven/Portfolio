@@ -10,7 +10,7 @@ export default function Contact() {
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0, x: 300 }}
         transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-        className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-3 bg-white mt-10 p-10 drop-shadow-xl'
+        className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl'
       >
         <h1 className='  text-2xl font-extrabold mb-5 '>Get In Contact!</h1>
         <p className='text-xl font-semibold'>
