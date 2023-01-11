@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Spline from "@splinetool/react-spline";
 import { AnimatePresence } from "framer-motion";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           </div>
           <Contact />
           <About />
+          <Portfolio />
         </div>
 
         <Footer />
