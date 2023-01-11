@@ -20,7 +20,8 @@ $animationSpeed: 12s;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 250px;
   margin: auto;
-  overflow: hidden;
+  overflow-x: hidden;
+
   position: relative;
   width: 95%;
 
@@ -60,10 +61,13 @@ $animationSpeed: 12s;
 
   .slide {
     position: relative;
-    transform: scale(2);
   }
-
-  .slide:hover {
-    transform: scale(2.5);
+  .slide img {
+    object-fit: contain;
+    max-height: 200px;
+    min-height: 200px;
+  }
+  .slide p {
+    position: relative;
   }
 }

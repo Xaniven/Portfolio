@@ -13,7 +13,7 @@ function App() {
       <AnimatePresence>
         <Navbar />
 
-        <div className='App '>
+        <div className='App'>
           <div className='flex justify-center items-center spWrap w-[75vw] mt-2'>
             {/* <Spline scene='https://prod.spline.design/HGoqdPfSiSFgN1L2/scene.splinecode' /> */}
           </div>

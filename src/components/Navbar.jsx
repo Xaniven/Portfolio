@@ -40,17 +40,17 @@ export default function Navbar() {
             <ul className='flex flex-col items-center justify-between min-h-[250px]'>
               <li className='border-b border-gray-400 my-8 uppercase'>
                 <a href='/about'>
-                  <span className='hover:bg-white p-2 rounded-lg'>About Me! 🧙🏽‍♂️</span>
+                  <span className='hover:bg-purple-800 p-2 rounded-lg'>About Me! 🧙🏽‍♂️</span>
                 </a>
               </li>
               <li className='border-b border-gray-400 my-8 uppercase'>
                 <a href='/portfolio'>
-                  <span className='hover:bg-white p-2 rounded-lg'>Portfolio 💼</span>
+                  <span className='hover:bg-purple-800 p-2 rounded-lg'>Portfolio 💼</span>
                 </a>
               </li>
               <li className='border-b border-gray-400 my-8 uppercase'>
                 <a href='/contact'>
-                  <span className='hover:bg-white p-2 rounded-lg'> Contact 📱</span>
+                  <span className='hover:bg-purple-800 p-2 rounded-lg'> Contact 📱</span>
                 </a>
               </li>
             </ul>

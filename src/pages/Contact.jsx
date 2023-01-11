@@ -1,6 +1,7 @@
 import React from "react";
 import { motion as M } from "framer-motion";
 
+document.title = "Get in Touch!";
 export default function Contact() {
   return (
     <>
@@ -10,7 +11,7 @@ export default function Contact() {
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0, x: 300 }}
         transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-        className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl'
+        className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5'
       >
         <h1 className='  text-2xl font-extrabold mb-5 '>Get In Contact!</h1>
         <p className='text-xl font-semibold'>
@@ -22,7 +23,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, x: 300 }}
           transition={{ type: "spring", stiffness: 200, delay: 0.5 }}
-          className='flex flex-col border-2 border-black justify-center items-center text-center p-5 gap-5 rounded-xl drop-shadow-xl mt-5'
+          className='flex flex-col border-2 border-black justify-center items-center text-center p-5 gap-5 rounded-xl drop-shadow-xl mt-5 bg-gray-200'
         >
           <label className=' font-medium'>Your Contact E-mail:</label>
           <input

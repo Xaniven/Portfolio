@@ -4,9 +4,40 @@ import baseImg from "../imgs/IMG-0364.jpg";
 import secImg from "../imgs/IMG-0196.jpg";
 import { motion as M } from "framer-motion";
 
+import img1 from "../imgs/bootstrap-logo.svg";
+import img2 from "../imgs/logo-logomark.svg";
+import img3 from "../imgs/React-icon.svg";
+import img4 from "../imgs/tailwindcss.svg";
+import img5 from "../imgs/js.svg";
+import img6 from "../imgs/framer.svg";
+import img7 from "../imgs/GraphQL_Logo.svg";
+import img8 from "../imgs/Solidity_logo.svg";
+import img9 from "../imgs/Nextjs-logo.svg";
+import img10 from "../imgs/ts-lettermark-blue.svg";
+import img11 from "../imgs/Moralis-LightBG-Logo.svg";
+import img12 from "../imgs/Threejs-logo.svg";
+
 document.title = "About Me!";
 
 function About() {
+  const sVar = [
+    { src: img1, title: "BootStrap5" },
+    { src: img2, title: "Firebase" },
+    { src: img3, title: "React" },
+    { src: img4, title: "TailwindCss" },
+    { src: img5, title: "Javascript" },
+    { src: img6, title: "FramerMotion" },
+  ];
+
+  const sVar2 = [
+    { src: img7, title: "GraphQL" },
+    { src: img8, title: "Solidity" },
+    { src: img9, title: "Next.js" },
+    { src: img10, title: "Typescript" },
+    { src: img11, title: "Moralis" },
+    { src: img12, title: "Three.js" },
+  ];
+
   return (
     <>
       <M.div
@@ -14,7 +45,7 @@ function About() {
         animate={{ opacity: 1, x: 0 }}
         whileInView={{ opacity: 1 }}
         exit={{ opacity: 0, x: 300 }}
-        transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+        transition={{ type: "spring", stiffness: 200, delay: 0.3 }}
         className='container flex flex-col justify-center justify-items-center align-middle rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 py-10 drop-shadow-xl'
       >
         <div className='flex flex-col justify-center items-center text-center gap-5'>
@@ -23,30 +54,35 @@ function About() {
             <img className=' object-cover none hover:block h-[500px] w-[500px]' src={secImg} />
           </div>
           <h1 className=' font-bold text-2xl my-5 '>Hi, I'm Kody </h1>
-          <p className='w-[60%] h-[auto] bg-slate-200 p-8 rounded-xl drop-shadow-lg'>
-            I'm a 26 y/o Front-end web developer learning full stack development. I am a hardworking
-            and driven indivdual Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-            dolor ea, laboriosam iusto esse fugit quaerat doloremque optio aliquam eligendi iste
-            eaque ullam quisquam saepe cumque quibusdam debitis nesciunt molestiae, error
-            voluptatibus incidunt pariatur magni rerum dolorum? Ipsa incidunt, nemo magnam nesciunt
-            hic fuga nisi deserunt quaerat pariatur debitis rerum.{" "}
+          <p className='w-[75%] h-[auto] bg-slate-200 p-8 rounded-xl drop-shadow-lg'>
+            I'm a 26 y/o self taught front-end web developer, learning full stack development. I am
+            a hardworking and driven indivdual. One of my current projects is a site template for
+            hemp/CBD buisnesses using the square web payments api Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Natus dolor ea, laboriosam iusto esse fugit quaerat
+            doloremque optio aliquam eligendi iste eaque ullam quisquam saepe cumque quibusdam
+            debitis nesciunt molestiae, error voluptatibus incidunt pariatur magni rerum dolorum?
+            Ipsa incidunt, nemo magnam nesciunt hic fuga nisi deserunt quaerat pariatur debitis
+            rerum.{" "}
           </p>
           <h2 className=' font-bold text-xl '>Here are some things I Know: </h2>
           <M.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ type: "spring", stiffness: 200, delay: 0.5 }}
+            className='w-[100%]'
           >
-            <Skillscroll />
+            <Skillscroll imgArray={sVar} />
           </M.div>
 
           <h3 className=' font-bold text-xl my-5'> Things I'm learning:</h3>
+          {/* spline, three, next, SQL, Solidity, typescript */}
           <M.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ type: "spring", stiffness: 200, delay: 0.7 }}
+            transition={{ type: "spring", stiffness: 200, delay: 0.8 }}
+            className='w-[100%]'
           >
-            <Skillscroll />
+            <Skillscroll imgArray={sVar2} />
           </M.div>
         </div>
       </M.div>
