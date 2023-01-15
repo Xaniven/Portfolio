@@ -52,7 +52,9 @@ function About() {
           <img className='object-cover block hover:hidden ' src={baseImg} />
           <img className=' object-cover none hover:block h-[500px] w-[500px]' src={secImg} />
         </div>
-        <h1 className=' font-bold text-2xl my-5 '>Hi, I'm Kody </h1>
+        <h1 className=' font-bold text-2xl my-5 '>
+          Hi, I'm Kody <br /> (Xaniven.eth){" "}
+        </h1>
         <p className='w-[75%] h-[auto] bg-slate-200 p-8 rounded-xl drop-shadow-lg'>
           I'm a 26 y/o self taught front-end web developer, learning full stack development. I am a
           hardworking and driven indivdual.I'm Currently being driven by a passion for 'Web3' &
@@ -64,7 +66,7 @@ function About() {
         <M.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, when: "beforeChildren" }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+          transition={{ type: "spring", stiffness: 100 }}
           className='w-[100%]'
         >
           <Skillscroll imgArray={sVar} />
@@ -75,7 +77,7 @@ function About() {
         <M.div
           initial={{ opacity: -1 }}
           animate={{ opacity: 1 }}
-          transition={{ type: "spring", stiffness: 100, delay: 1 }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.8 }}
           className='w-[100%]'
         >
           <Skillscroll imgArray={sVar2} />

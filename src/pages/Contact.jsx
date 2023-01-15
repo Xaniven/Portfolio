@@ -1,5 +1,6 @@
 import React from "react";
 import { motion as M } from "framer-motion";
+import { TfiGithub, TfiTwitterAlt, TfiLinkedin } from "react-icons/tfi";
 
 document.title = "Get in Touch!";
 export default function Contact() {
@@ -14,8 +15,8 @@ export default function Contact() {
     >
       <h1 className='  text-2xl font-extrabold mb-5 '>Get In Contact!</h1>
       <p className='text-xl font-semibold'>
-        Have an idea for a sweet new app? Need a landing page for your brand? What ever it is, let's
-        create something cool!
+        Have an idea for a sweet new app or need a landing page for your brand? Send an E-mail below
+        and lets get started!
       </p>
       <M.form
         initial={{ opacity: 0, y: 100 }}
@@ -49,6 +50,24 @@ export default function Contact() {
           Submit
         </button>
       </M.form>
+      <h2 className='text-2xl font-extrabold my-5 '>Or contact me Via:</h2>
+      <div className='linkWrap flex my-8 w-[100%] justify-evenly '>
+        <a href='https://github.com/Xaniven'>
+          <button className='hover:text-purple-600 hover:animate-bounce focus:animate-ping'>
+            <TfiGithub size={35} />
+          </button>
+        </a>
+        <a href='https://www.linkedin.com/in/kody-kelley-564510240/'>
+          <button className='hover:text-purple-600 hover:animate-bounce focus:animate-ping'>
+            <TfiLinkedin size={35} />
+          </button>
+        </a>
+        <a href='https://twitter.com/Xaniven'>
+          <button className='hover:text-purple-600 hover:animate-bounce focus:animate-ping'>
+            <TfiTwitterAlt size={35} />
+          </button>
+        </a>
+      </div>
     </M.div>
   );
 }
