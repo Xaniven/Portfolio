@@ -35,7 +35,7 @@ export default function Contact() {
         />
         <label className='font-medium'>Your Message:</label>
         <input
-          className='rounded-2xl border-2 border-black p-2 drop-shadow-xl w-60 bg-purple-600 h-[20vh]'
+          className='rounded-2xl border-2 border-black p-2 drop-shadow-xl w-60 bg-purple-600 pb-[10rem]'
           type='text'
           name='name'
           placeholder='What do you want to make?!'

@@ -16,7 +16,10 @@ function App() {
 
         <div className='App'>
           <div className='flex justify-center items-center spWrap w-[75vw] mt-2'>
-            {/* <Spline scene='https://prod.spline.design/HGoqdPfSiSFgN1L2/scene.splinecode' /> */}
+            <Spline
+              className='w-[250px]'
+              scene='https://prod.spline.design/HGoqdPfSiSFgN1L2/scene.splinecode'
+            />
           </div>
           <About />
           <Contact />

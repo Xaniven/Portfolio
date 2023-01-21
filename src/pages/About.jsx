@@ -55,12 +55,21 @@ function About() {
         <h1 className=' font-bold text-2xl my-5 '>
           Hi, I'm Kody <br /> (Xaniven.eth){" "}
         </h1>
-        <p className='w-[75%] h-[auto] bg-slate-200 p-8 rounded-xl drop-shadow-lg'>
-          I'm a 26 y/o self taught front-end web developer, learning full stack development. I am a
-          hardworking and driven indivdual.I'm Currently being driven by a passion for 'Web3' &
-          Crypto. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci aut itaque
-          molestiae explicabo asperiores nihil. Enim quibusdam et aliquid incidunt nesciunt quidem.
-          Molestiae, impedit tenetur.
+        <p className='w-[75%] h-[auto] bg-slate-200 p-8 rounded-xl drop-shadow-lg break-keep'>
+          My name is Kody Kelley and I am a 26-year-old, self-taught front-end web developer. I am
+          currently expanding my skillset to become a full stack developer. I am a hardworking and
+          driven individual who is dedicated to constantly improving my skills and knowledge in the
+          field. I have a passion for web3 and crypto and am always looking to stay up to date on
+          the latest advancements in the industry. Currently, I am seeking entry-level front-end
+          work opportunities to gain more experience and continue to grow as a developer. I believe
+          that the key to success as a developer is to never stop learning and growing, and I take
+          this approach to heart in everything that I do. I have spent countless hours learning new
+          technologies, experimenting with different tools and frameworks, and honing my skills as a
+          developer. I am eager to take on new challenges and work with a team of experienced
+          professionals who can help me to further develop my skills and advance my career. My
+          long-term goal is to become a full stack developer and I am confident that with my skills
+          and experience, I will be able to make a significant impact in the world of web
+          development and help to shape the future of the internet.
         </p>
         <h2 className=' font-bold text-xl '>Here are some things I know: </h2>
         <M.div
