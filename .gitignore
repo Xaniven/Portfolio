@@ -13,6 +13,8 @@ dist-ssr
 *.local
 *.jpg
 *.svg
+*.pdf
+*.png
 
 # Editor directories and files
 .vscode/*

@@ -70,6 +70,8 @@ function About() {
           long-term goal is to become a full stack developer and I am confident that with my skills
           and experience, I will be able to make a significant impact in the world of web
           development and help to shape the future of the internet.
+          <br />
+          (Totally not written by ChatGPT 😉)
         </p>
         <h2 className=' font-bold text-xl '>Here are some things I know: </h2>
         <M.div
