@@ -12,12 +12,11 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <AnimatePresence initial={true} exitBeforeEnter={true} onExitComplete={() => null}>
+      <AnimatePresence initial={true} onExitComplete={() => null}>
         <Navbar />
-
         <div className='App'>
           <Portfolio />
-          <Home />
+          {/* <Home /> */}
           <About />
           <Contact />
         </div>

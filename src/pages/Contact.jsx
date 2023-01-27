@@ -50,11 +50,11 @@ export default function Contact() {
           Submit
         </button>
       </M.form>
-      <h2 className='text-2xl font-extrabold my-5 '>Or contact me Via:</h2>
+      <h2 className='text-2xl font-extrabold my-5 '>Or Follow Me on:</h2>
       <div className='linkWrap flex my-8 w-[100%] justify-evenly '>
-        <a href='https://github.com/Xaniven'>
+        <a href='https://twitter.com/Xaniven'>
           <button className='hover:text-purple-600 hover:animate-bounce focus:animate-ping'>
-            <TfiGithub size={35} />
+            <TfiTwitterAlt size={35} />
           </button>
         </a>
         <a href='https://www.linkedin.com/in/kody-kelley-564510240/'>
@@ -62,9 +62,9 @@ export default function Contact() {
             <TfiLinkedin size={35} />
           </button>
         </a>
-        <a href='https://twitter.com/Xaniven'>
+        <a href='https://github.com/Xaniven'>
           <button className='hover:text-purple-600 hover:animate-bounce focus:animate-ping'>
-            <TfiTwitterAlt size={35} />
+            <TfiGithub size={35} />
           </button>
         </a>
       </div>
