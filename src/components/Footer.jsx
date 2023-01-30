@@ -5,8 +5,8 @@ import "./footer.scss";
 
 export default function Footer() {
   return (
-    <>
-      <div className='foot container-fluid p-2 mt-5'>
+    <div className='footer-whole bottom-0'>
+      <div className='foot container-fluid pt-2 mt-10 '>
         <motion.div
           whileHover={{ scale: 1.3 }}
           initial={{ opacity: -1 }}
@@ -41,6 +41,6 @@ export default function Footer() {
           <h5>Contact Me </h5>
         </motion.div>
       </div>
-    </>
+    </div>
   );
 }

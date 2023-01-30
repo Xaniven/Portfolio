@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../components/Navbar.scss";
+import { Link as Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -39,17 +40,17 @@ export default function Navbar() {
             </div>
             <ul className='flex flex-col items-center justify-between min-h-[250px]'>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a href='/about'>
+                <a to='/about'>
                   <span className='hover:bg-purple-800 p-2 rounded-lg'>About Me! 🧙🏽‍♂️</span>
                 </a>
               </li>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a href='/portfolio'>
+                <a to='/skillz'>
                   <span className='hover:bg-purple-800 p-2 rounded-lg'>Portfolio 💼</span>
                 </a>
               </li>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a href='/contact'>
+                <a to='/contact'>
                   <span className='hover:bg-purple-800 p-2 rounded-lg'> Contact 📱</span>
                 </a>
               </li>
@@ -59,32 +60,22 @@ export default function Navbar() {
 
         <ul className='DESKTOP-MENU hidden space-x-8 lg:flex mr-5'>
           <li>
-            <a href='/about'>
-              {" "}
-              <button
-                href='/contact'
-                className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'
-              >
+            <Link to='/about'>
+              <button className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'>
                 About Me! 🧙🏽‍♂️
               </button>{" "}
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/portfolio'>
-              <button
-                href='/contact'
-                className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'
-              >
+            <a to='/skillz'>
+              <button className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'>
                 Portfolio 💼
               </button>
             </a>
           </li>
           <li>
-            <a href='/contact'>
-              <button
-                href='/contact'
-                className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'
-              >
+            <a to='/contact'>
+              <button className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'>
                 Contact 📱
               </button>
             </a>

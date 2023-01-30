@@ -11,4 +11,6 @@ html {
   scrollbar-color: black;
   scrollbar-gutter: transparent;
   scrollbar-color: transparent;
+  height: auto;
+  min-height: 100vh;
 }

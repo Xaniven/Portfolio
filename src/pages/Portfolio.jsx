@@ -15,7 +15,7 @@ export default function Portfolio() {
       transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
       className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 min-h-[75vh]'
     >
-      <h1 className=' font-bold text-2xl mb-5'>Things i've worked on:</h1>
+      <h1 className=' font-bold text-2xl mb-5'>Things I've worked on:</h1>
       <img src={npd} alt='' />
       <section className=''>
         <M.details initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} open>
@@ -35,7 +35,7 @@ export default function Portfolio() {
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
-                  Programming With Javascript
+                  Version Control
                 </p>
               </div>
             </div>
@@ -43,7 +43,7 @@ export default function Portfolio() {
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
-                  Programming With Javascript
+                  HTML and CSS in depth
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function Portfolio() {
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
-                  Programming With Javascript
+                  React Basics
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function Portfolio() {
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
-                  Programming With Javascript
+                  Introduction to Front-End Development
                 </p>
               </div>
             </div>
@@ -69,6 +69,7 @@ export default function Portfolio() {
           <summary className=' text-2xl font-bold underline p-5 marker:text-white'>
             Github Projects 🤖:
           </summary>
+          <div className='card-group grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3  gap-4'></div>
         </details>
       </section>
     </M.div>
