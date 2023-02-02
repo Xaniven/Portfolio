@@ -14,3 +14,7 @@ html {
   height: auto;
   min-height: 100vh;
 }
+canvas {
+  min-height: 75vh;
+  top: 0;
+}

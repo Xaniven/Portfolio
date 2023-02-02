@@ -2,15 +2,14 @@ import React from "react";
 import { motion as M } from "framer-motion";
 import { TfiGithub, TfiTwitterAlt, TfiLinkedin } from "react-icons/tfi";
 
-document.title = "Get in Touch!";
 export default function Contact() {
+  document.title = "Get in Touch!";
   return (
     <M.div
-      initial={{ opacity: 0, x: -500 }}
+      initial={{ opacity: 0, x: "-100vw" }}
       animate={{ opacity: 1, x: 0 }}
-      whileInView={{ opacity: 1 }}
-      exit={{ opacity: 0, x: 300 }}
-      transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
+      exit={{ x: "-100vw" }}
+      transition={{ type: "spring", stiffness: 100 }}
       className='container flex flex-col justify-center text-center items-center rounded-lg border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 w-[100%]'
     >
       <h1 className='  text-2xl font-extrabold mb-5 '>Get In Contact!</h1>

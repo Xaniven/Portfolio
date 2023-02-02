@@ -4,15 +4,14 @@ import pdf1 from "../imgs/Coursera.png";
 import npd from "../imgs/npd.jpg";
 import "../pages/Port.scss";
 
-document.title = " I Got Skillz";
 export default function Portfolio() {
+  document.title = " I Got Skillz";
   return (
     <M.div
-      initial={{ opacity: 0, x: -500 }}
+      initial={{ opacity: 0, x: "-100vw" }}
       animate={{ opacity: 1, x: 0 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 300 }}
-      transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+      exit={{ x: "-100vw" }}
+      transition={{ type: "spring", stiffness: 200 }}
       className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 min-h-[75vh]'
     >
       <h1 className=' font-bold text-2xl mb-5'>Things I've worked on:</h1>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../components/Navbar.scss";
-import { Link as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -18,15 +18,15 @@ export default function Navbar() {
             className='HAMBURGER-ICON space-y-2 mr-5'
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
-            <span className='block h-0.5 w-8 animate-pulse bg-gray-800'></span>
-            <span className='block h-0.5 w-8 animate-pulse bg-gray-800'></span>
-            <span className='block h-0.5 w-8 animate-pulse bg-gray-800'></span>
+            <span className='block h-0.5 w-8 animate-pulse bg-purple-600'></span>
+            <span className='block h-0.5 w-8 animate-pulse bg-purple-400'></span>
+            <span className='block h-0.5 w-8 animate-pulse bg-purple-800'></span>
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
             <div className='absolute top-0 right-0 px-8 py-8' onClick={() => setIsNavOpen(false)}>
               <svg
-                className='h-8 w-8 text-gray-600'
+                className='h-8 w-8 text-purple-800'
                 viewBox='0 0 24 24'
                 fill='none'
                 stroke='currentColor'
@@ -40,19 +40,35 @@ export default function Navbar() {
             </div>
             <ul className='flex flex-col items-center justify-between min-h-[250px]'>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a to='/about'>
-                  <span className='hover:bg-purple-800 p-2 rounded-lg'>About Me! 🧙🏽‍♂️</span>
-                </a>
+                <Link to='/about'>
+                  <span
+                    onClick={() => setIsNavOpen(false)}
+                    className='hover:bg-purple-800 p-2 rounded-lg'
+                  >
+                    About Me! 🧙🏽‍♂️
+                  </span>
+                </Link>
               </li>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a to='/skillz'>
-                  <span className='hover:bg-purple-800 p-2 rounded-lg'>Portfolio 💼</span>
-                </a>
+                <Link to='/skillz'>
+                  <span
+                    onClick={() => setIsNavOpen(false)}
+                    className='hover:bg-purple-800 p-2 rounded-lg'
+                  >
+                    Portfolio 💼
+                  </span>
+                </Link>
               </li>
               <li className='border-b border-gray-400 my-8 uppercase'>
-                <a to='/contact'>
-                  <span className='hover:bg-purple-800 p-2 rounded-lg'> Contact 📱</span>
-                </a>
+                <Link to='/contact'>
+                  <span
+                    onClick={() => setIsNavOpen(false)}
+                    className='hover:bg-purple-800 p-2 rounded-lg'
+                  >
+                    {" "}
+                    Contact 📱
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -63,22 +79,22 @@ export default function Navbar() {
             <Link to='/about'>
               <button className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'>
                 About Me! 🧙🏽‍♂️
-              </button>{" "}
+              </button>
             </Link>
           </li>
           <li>
-            <a to='/skillz'>
+            <Link to='/skillz'>
               <button className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'>
                 Portfolio 💼
               </button>
-            </a>
+            </Link>
           </li>
           <li>
-            <a to='/contact'>
+            <Link to='/contact'>
               <button className='contact-button bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2'>
                 Contact 📱
               </button>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
