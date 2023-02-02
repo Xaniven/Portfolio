@@ -20,6 +20,8 @@ export default function Contact() {
       <div className='wrapForm flex flex-col justify-center w-[100%] lg:flex-row h-auto'>
         <div className=' w-[100%]'>
           <M.form
+            method='POST'
+            action='https://formsubmit.co/90d304ed0f6ab5c7c004216dc128e2f5'
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, x: 300 }}
@@ -30,7 +32,7 @@ export default function Contact() {
             <input
               className='rounded-lg border-2 border-purple-600 p-2 drop-shadow-xl w-[80%]'
               type='email'
-              name='name'
+              name='email'
               placeholder="What's Your Email?"
               required
             />
@@ -38,7 +40,7 @@ export default function Contact() {
             <textarea
               className='rounded-lg border-2 border-purple-600 p-2 drop-shadow-xl pb-40 resize-y w-[80%]'
               type='text'
-              name='name'
+              name='Message'
               placeholder='What do you want to make?!'
               required
             />
@@ -51,6 +53,7 @@ export default function Contact() {
                 Submit
               </button>
             </div>
+            <input type='hidden' name='_next' value='http://localhost:5173/'></input>
           </M.form>
         </div>
         <div className=' flex flex-col min-w-[20%]'>
