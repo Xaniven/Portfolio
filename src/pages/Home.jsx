@@ -1,6 +1,5 @@
 import React from "react";
 import Spline from "@splinetool/react-spline";
-import "../index.css";
 
 export default function Home() {
   document.title = "Xaniven.eth";

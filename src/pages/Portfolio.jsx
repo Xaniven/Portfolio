@@ -21,11 +21,11 @@ export default function Portfolio() {
           <summary className=' text-2xl font-bold underline p-5 marker:text-white'>
             Coursera Certificates 📜:{" "}
           </summary>
-          <div className='card-group grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3  gap-4'>
+          <div className='card-group mt-5 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3  gap-4'>
             <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
-                <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
+                <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Programming With Javascript
                 </p>
               </div>
@@ -33,7 +33,7 @@ export default function Portfolio() {
             <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
-                <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
+                <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Version Control
                 </p>
               </div>
@@ -41,7 +41,7 @@ export default function Portfolio() {
             <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
-                <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
+                <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   HTML and CSS in depth
                 </p>
               </div>
@@ -49,7 +49,7 @@ export default function Portfolio() {
             <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
-                <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
+                <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   React Basics
                 </p>
               </div>
@@ -57,7 +57,7 @@ export default function Portfolio() {
             <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
-                <p className=' absolute bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
+                <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Introduction to Front-End Development
                 </p>
               </div>
@@ -65,10 +65,29 @@ export default function Portfolio() {
           </div>
         </M.details>
         <details>
-          <summary className=' text-2xl font-bold underline p-5 marker:text-white'>
+          <summary className='mt-2 text-2xl font-bold underline p-5 marker:text-white'>
             Github Projects 🤖:
           </summary>
-          <div className='card-group grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3  gap-4'></div>
+          <div className='card-group mt-6 gap-4'>
+            <div className='ghWrap min-h-[40vh] gap-4 flex lg:flex-row flex-col '>
+              <div className=' lg:w-[60%] lg:mr-5 bg-slate-200 p-8 rounded-xl drop-shadow-lg break-keep'>
+                <p>
+                  I'm currently working on building a E-commernce site using Square Web Payments
+                  API. I have a CBD side project i'm working on and the commonly used Stripe API
+                  doesn't allow anything CBD related. I plan on releasing this as an open source
+                  template that others who have the same issue with Stripe that I did, after a lot
+                  of refactoring and a rebuild using tailwind instead of bootstrap. Note: in it's
+                  current state this is just me working to get a working prototype ASAP, I know the
+                  code is kind of ugly 😅
+                </p>
+              </div>
+              <iframe
+                className='lg:w-[40%] rounded-lg'
+                src='https://xaniven.github.io/firebase-practice/'
+                frameborder='0'
+              ></iframe>
+            </div>
+          </div>
         </details>
       </section>
     </M.div>

@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <nav className='flex items-center justify-between border-b border-gray-400 py-8 mx-3'>
+    <nav className='flex items-center justify-between border-b border-purple-800 py-8 mx-3'>
       <a href='/'>
         <p className='lgWrap text-2xl ml-5 '>
           <span className='lgSpan'>Hi, I'm Kody! 🙋🏽‍♂️</span>
@@ -65,7 +65,6 @@ export default function Navbar() {
                     onClick={() => setIsNavOpen(false)}
                     className='hover:bg-purple-800 p-2 rounded-lg'
                   >
-                    {" "}
                     Contact 📱
                   </span>
                 </Link>
