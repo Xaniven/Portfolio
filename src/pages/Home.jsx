@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Spline from "@splinetool/react-spline";
 import HomeImages from "../components/HomeImages";
+import CommentSection from "../components/CommentSection";
 
 export default function Home() {
   document.title = "Xaniven.eth";
@@ -14,14 +15,19 @@ export default function Home() {
     );
   } else if (dEnabled === false) {
     return (
-      <>
-        <div className='homeWrap flex w-[100vw] gap-6 m-10'>
-          <div className='textSection basis-2/3 bg-slate-200 p-8 rounded-xl drop-shadow-lg break-keep'></div>
-          <div className='imgSection basis-1/3'>
+      <div className='flex flex-col w-[100%]'>
+        <div className='homeWrap flex  h-[100%] gap-6 m-8'>
+          <div className=' textSection basis-2/3 bg-slate-200 p-4 rounded-xl drop-shadow-lg break-keep'>
+            hi
+          </div>
+          <div className=' h-[100%] imgSection basis-1/3'>
             <HomeImages />
           </div>
         </div>
-      </>
+        <div className='commentWrap w-[100%]'>
+          <CommentSection />
+        </div>
+      </div>
     );
   }
 }

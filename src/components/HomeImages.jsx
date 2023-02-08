@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import img1 from "../imgs/IMG-0430.png";
 import img2 from "../imgs/IMG-0429.png";
 import img3 from "../imgs/IMG-0423.png";
@@ -29,7 +30,7 @@ export default function HomeImages() {
         onClick={() => getRando()}
         className=' bg-white hover:bg-purple-800 rounded-2xl border-black border-2 p-2 w-[50%] mt-5'
       >
-        Change Greeting
+        🔀 Random
       </button>
     </div>
   );

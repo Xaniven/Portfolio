@@ -1,6 +1,7 @@
 import React, { useState, Suspense } from "react";
 import "./App.scss";
 import AnimatedRoutes from "./components/AnimatedRoutes";
+
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
