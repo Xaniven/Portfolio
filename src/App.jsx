@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from "react";
+import React from "react";
 import "./App.scss";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 

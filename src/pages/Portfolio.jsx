@@ -18,11 +18,11 @@ export default function Portfolio() {
       <img src={npd} alt='' />
       <section className=''>
         <M.details initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} open>
-          <summary className=' text-2xl font-bold underline p-5 marker:text-white'>
+          <summary className=' text-2xl font-bold underline p-5 marker:text-purple-600'>
             Coursera Certificates 📜:{" "}
           </summary>
           <div className='card-group mt-5 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3  gap-4'>
-            <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
+            <div className=' hover:scale-110 card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
@@ -30,7 +30,7 @@ export default function Portfolio() {
                 </p>
               </div>
             </div>
-            <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
+            <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
@@ -38,7 +38,7 @@ export default function Portfolio() {
                 </p>
               </div>
             </div>
-            <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
+            <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
@@ -46,7 +46,7 @@ export default function Portfolio() {
                 </p>
               </div>
             </div>
-            <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
+            <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
@@ -54,7 +54,7 @@ export default function Portfolio() {
                 </p>
               </div>
             </div>
-            <div className='card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
+            <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
               <img className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
@@ -65,7 +65,7 @@ export default function Portfolio() {
           </div>
         </M.details>
         <details>
-          <summary className='mt-2 text-2xl font-bold underline p-5 marker:text-white'>
+          <summary className='mt-2 text-2xl font-bold underline p-5 marker:text-purple-600'>
             Github Projects 🤖:
           </summary>
           <div className='card-group mt-6 gap-4'>

@@ -32,41 +32,49 @@ export default function CommentSection() {
 
   return (
     <div className='flex justify-center '>
-      <div className='commentBox rounded-2xl bg-white shadow-inner w-[90%] overflow-y-scroll'>
+      <div className='commentBox rounded-2xl bg-gray-200 shadow-inner w-[100%]  m-8'>
         <div className=' addComment border-b border-purple-800 shadow-xl '>
           <form className='flex lg:flex-row flex-col items-center m-2 p-2' action=''>
             <div className='titleWrap text-center font-bold bg-slate-400 h-full rounded-lg m-2 p-2'>
               <h2>Leave a Comment!</h2>
               <p>(Hateful comments will be removed )</p>
             </div>
-            <label className=' font-medium'>Username:</label>
+            <label className=' font-medium'>
+              Username: <br /> (optional)
+            </label>
             <input
               ref={nameRef}
-              className=' basis-2/6 border-purple-800 border-2 m-4 rounded-lg w-[80%]'
+              className=' basis-2/6 border-purple-800 border-2 m-4 rounded-lg w-[80%] p-2'
               type='text'
               name=''
               id=''
             />
-            <label className='font-medium'>Message:</label>
+            <label className='font-medium'>Comment:</label>
             <input
               ref={messageRef}
-              className=' basis-2/6 border-purple-800 border-2 m-4 rounded-lg w-[80%]'
+              className=' basis-2/6 border-purple-800 border-2 m-4 rounded-lg w-[80%] p-2'
               type='text'
               name=''
               id=''
             />
             <button
               className=' border-2 border-purple-800 p-2 m-2 rounded-md hover:bg-purple-800 hover:text-white'
-              onClick={() => addComment(nameRef.current.value, messageRef.current.value)}
+              onClick={(e) => {
+                e.preventDefault;
+                addComment(nameRef.current.value(), messageRef.current.value());
+              }}
             >
               Submit
             </button>
           </form>
         </div>
-        <div className='showComments w-full h-[30vh] mb-2 relative bottom-0'>
+        <div className='showComments w-full h-[50vh] mb-2 relative bottom-0 overflow-y-scroll'>
           {comments.map((coms) => (
             <Com text={coms.data.text} name={coms.data.name} key={coms.id} />
           ))}
+          <div className='test text-center m-6'>
+            if you can see this, firebase limit is reached 😅
+          </div>
         </div>
       </div>
     </div>
