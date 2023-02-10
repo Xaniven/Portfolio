@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Spline from "@splinetool/react-spline";
 import HomeImages from "../components/HomeImages";
 import CommentSection from "../components/CommentSection";
+import { motion as M } from "framer-motion";
 
 export default function Home() {
   document.title = "Xaniven.eth";
@@ -15,7 +16,13 @@ export default function Home() {
     );
   } else if (dEnabled === false) {
     return (
-      <div className='flex flex-col gap-8 m-10 w-[100%]'>
+      <M.div
+        initial={{ opacity: 0, x: "-100vw" }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: -1 }}
+        transition={{ type: "spring", stiffness: 200 }}
+        className='flex flex-col gap-8 m-10 w-[100%]'
+      >
         <h1 className=' text-center font-extrabold text-2xl'>Best Hero Section Ever</h1>
         <div className='homeWrap flex lg:flex-row flex-col-reverse h-[100%] gap-6 m-8 '>
           <div className=' h-auto text-center textSection basis-2/3 bg-slate-200 p-4 rounded-xl drop-shadow-lg break-keep'>
@@ -31,7 +38,7 @@ export default function Home() {
           <h2 className=' text-center font-extrabold text-2xl'>Comment Section</h2>
           <CommentSection />
         </div>
-      </div>
+      </M.div>
     );
   }
 }

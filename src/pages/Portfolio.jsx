@@ -10,7 +10,7 @@ export default function Portfolio() {
     <M.div
       initial={{ opacity: 0, x: "-100vw" }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ x: "-100vw" }}
+      exit={{ opacity: -1 }}
       transition={{ type: "spring", stiffness: 200 }}
       className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 min-h-[75vh]'
     >

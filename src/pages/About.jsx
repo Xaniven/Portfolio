@@ -41,7 +41,7 @@ function About() {
     <M.div
       initial={{ x: "-100vw", opacity: 0 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ x: "-100vw" }}
+      exit={{ opacity: -1 }}
       transition={{ type: "spring", stiffness: 100 }}
       className='container flex flex-col justify-center justify-items-center align-middle rounded-2xl border-slate-900 border-4 mx-[250px] bg-gray-400 mt-10 py-10 drop-shadow-xl'
     >
