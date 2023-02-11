@@ -1,17 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, getDocs, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase";
 import Com from "./Com";
 
 export default function CommentSection() {
   const [comments, setComments] = useState([]);
+  const [loading, setLoading] = useState(false);
   const messageRef = useRef("");
   const nameRef = useRef("anon");
 
+  //Get comments on page load
   useEffect(() => {
     getComments();
-  }, []);
+  }, [comments]);
 
+  // firebase call to get comments
   function getComments() {
     const querySnapshot = getDocs(collection(db, "commentDB")).then((response) => {
       const r = response.docs.map((doc) => ({
@@ -21,13 +24,20 @@ export default function CommentSection() {
       setComments(r);
     });
   }
-
-  function addComment(nm, msg, e) {
-    e.preventDefault();
-    addDoc(collection(db, "commentDB"), {
+  //add comment to db, call set comments to trigger useEffect, reset button load state
+  //clear input fields
+  async function addComment(nm, msg) {
+    const docRef = await addDoc(collection(db, "commentDB"), {
       name: nm,
       text: msg,
+      timestamp: serverTimestamp(),
     });
+
+    setComments([]);
+    setLoading(false);
+
+    nameRef.current.value = "";
+    messageRef.current.value = "";
   }
 
   return (
@@ -60,20 +70,26 @@ export default function CommentSection() {
             <button
               className=' border-2 border-purple-800 p-2 m-2 rounded-md hover:bg-purple-800 hover:text-white'
               onClick={(e) => {
-                e.preventDefault;
-                addComment(nameRef.current.value(), messageRef.current.value());
+                e.preventDefault();
+                setLoading(true);
+                addComment(nameRef.current.value, messageRef.current.value);
               }}
             >
-              Submit
+              {loading == true ? "Loading" : "Submit"}
             </button>
           </form>
         </div>
         <div className='showComments w-full h-[50vh] mb-2 relative bottom-0 overflow-y-scroll'>
           {comments.map((coms) => (
-            <Com text={coms.data.text} name={coms.data.name} key={coms.id} />
+            <Com
+              text={coms.data.text}
+              name={coms.data.name}
+              key={coms.id}
+              timestamp={coms.data.timestamp}
+            />
           ))}
           <div className='test text-center m-6'>
-            if you can see this, firebase limit is reached 😅
+            {comments.length == 0 ? "if you can see this, firebase limit is reached 😅" : ""}
           </div>
         </div>
       </div>

@@ -8,8 +8,8 @@ export default function Contact() {
     <M.div
       initial={{ opacity: 0, x: "-100vw" }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0 }}
-      transition={{ type: "spring", stiffness: 100 }}
+      exit={{ opacity: -1 }}
+      transition={{ type: "spring", stiffness: 200 }}
       className='container flex flex-col justify-center text-center items-center rounded-lg border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 w-[100%]'
     >
       <h1 className='  text-2xl font-extrabold mb-5 '>Get In Contact!</h1>

@@ -39,10 +39,10 @@ function About() {
 
   return (
     <M.div
-      initial={{ x: "-100vw", opacity: 0 }}
+      initial={{ opacity: 0, x: "-100vw" }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: -1 }}
-      transition={{ type: "spring", stiffness: 100 }}
+      transition={{ type: "spring", stiffness: 200 }}
       className='container flex flex-col justify-center justify-items-center align-middle rounded-2xl border-slate-900 border-4 mx-[250px] bg-gray-400 mt-10 py-10 drop-shadow-xl'
     >
       <div className='flex flex-col justify-center items-center text-center gap-5'>
