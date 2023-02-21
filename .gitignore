@@ -15,6 +15,9 @@ dist-ssr
 *.svg
 *.pdf
 *.png
+firebase.json
+.firebaserc
+hosting.ZGlzdA.cache
 
 # Editor directories and files
 .vscode/*
