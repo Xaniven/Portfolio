@@ -1,6 +1,11 @@
 import React from "react";
 import { motion as M } from "framer-motion";
-import pdf1 from "../imgs/Coursera.png";
+import pdf from "../imgs/Coursera.png";
+import pdf1 from "../imgs/Coursera1.jpg";
+import pdf2 from "../imgs/Coursera2.jpg";
+import pdf3 from "../imgs/Coursera3.jpg";
+import pdf4 from "../imgs/Coursera4.jpg";
+import pdf5 from "../imgs/Coursera5.jpg";
 import npd from "../imgs/npd.jpg";
 import "../pages/Port.scss";
 
@@ -23,7 +28,7 @@ export default function Portfolio() {
           </summary>
           <div className='card-group mt-5 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3  gap-4'>
             <div className=' hover:scale-110 card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf1} alt='' />
+              <img className='card' src={pdf} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Programming With Javascript
@@ -39,7 +44,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf1} alt='' />
+              <img className='card' src={pdf5} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   HTML and CSS in depth
@@ -47,7 +52,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf1} alt='' />
+              <img className='card' src={pdf2} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   React Basics
@@ -55,7 +60,15 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf1} alt='' />
+              <img className='card' src={pdf4} alt='' />
+              <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
+                <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
+                  Advanced React
+                </p>
+              </div>
+            </div>
+            <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
+              <img className='card' src={pdf3} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Introduction to Front-End Development

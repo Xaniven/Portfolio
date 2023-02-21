@@ -6,13 +6,13 @@ import Com from "./Com";
 export default function CommentSection() {
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(false);
-  const messageRef = useRef("");
-  const nameRef = useRef("anon");
+  const messageRef = useRef();
+  const nameRef = useRef("");
 
   //Get comments on page load
   useEffect(() => {
     getComments();
-  }, [comments]);
+  }, []);
 
   // firebase call to get comments
   function getComments() {
@@ -27,27 +27,42 @@ export default function CommentSection() {
   //add comment to db, call set comments to trigger useEffect, reset button load state
   //clear input fields
   async function addComment(nm, msg) {
+    const timestamp = serverTimestamp();
+
     const docRef = await addDoc(collection(db, "commentDB"), {
       name: nm,
       text: msg,
-      timestamp: serverTimestamp(),
+      time: timestamp,
     });
 
-    setComments([]);
     setLoading(false);
-
+    getComments();
+    //TODO:rebuild
+    //this will cause issue if 2 anon comments are made by same user, the second will have and empty string for username
     nameRef.current.value = "";
     messageRef.current.value = "";
   }
 
+  //render component
   return (
     <div className='flex justify-center '>
-      <div className='commentBox rounded-2xl bg-gray-200 shadow-inner w-[100%]  m-8'>
+      <div className='commentBox rounded-2xl bg-gray-200 shadow-inner w-[75%]  m-8'>
         <div className=' addComment border-b border-purple-800 shadow-xl '>
-          <form className='flex lg:flex-row flex-col items-center m-2 p-2' action=''>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              setLoading(true);
+              if (nameRef.current.value == "" || null) {
+                nameRef.current.value = "anon";
+                addComment(nameRef.current.value, messageRef.current.value);
+              } else addComment(nameRef.current.value, messageRef.current.value);
+            }}
+            id='commentForm'
+            className='flex lg:flex-row flex-col items-center m-2 p-2'
+          >
             <div className='titleWrap text-center font-bold bg-slate-400 h-full rounded-lg m-2 p-2'>
               <h2>Leave a Comment!</h2>
-              <p>(Hateful comments will be removed )</p>
+              <p>(Hateful comments will be removed)</p>
             </div>
             <label className=' font-medium'>
               Username: <br /> (optional)
@@ -56,24 +71,20 @@ export default function CommentSection() {
               ref={nameRef}
               className=' basis-2/6 border-purple-800 border-2 m-4 rounded-lg w-[80%] p-2'
               type='text'
-              name=''
-              id=''
+              id='comment user'
             />
             <label className='font-medium'>Comment:</label>
             <input
               ref={messageRef}
               className=' basis-2/6 border-purple-800 border-2 m-4 rounded-lg w-[80%] p-2'
               type='text'
-              name=''
-              id=''
+              id='comment input'
+              required={true}
             />
             <button
               className=' border-2 border-purple-800 p-2 m-2 rounded-md hover:bg-purple-800 hover:text-white'
-              onClick={(e) => {
-                e.preventDefault();
-                setLoading(true);
-                addComment(nameRef.current.value, messageRef.current.value);
-              }}
+              type='submit'
+              disabled={loading}
             >
               {loading == true ? "Loading" : "Submit"}
             </button>
@@ -85,7 +96,7 @@ export default function CommentSection() {
               text={coms.data.text}
               name={coms.data.name}
               key={coms.id}
-              timestamp={coms.data.timestamp}
+              t={coms.data.time.seconds}
             />
           ))}
           <div className='test text-center m-6'>

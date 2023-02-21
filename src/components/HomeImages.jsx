@@ -8,8 +8,9 @@ import img5 from "../imgs/IMG-0425.png";
 import img6 from "../imgs/IMG-0427.png";
 import img7 from "../imgs/IMG-0420.png";
 import img8 from "../imgs/IMG-0435.png";
+import img9 from "../imgs/IMG-0426.png";
 
-const heroImgArray = [img1, img2, img3, img4, img5, img6, img7, img8];
+const heroImgArray = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
 export default function HomeImages() {
   const [imgIndex, setImgIndex] = useState(Math.floor(Math.random() * heroImgArray.length));

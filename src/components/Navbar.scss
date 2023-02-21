@@ -22,6 +22,7 @@
 }
 
 .lgWrap:hover::before {
-  content: "On the interwebs i go by Xaniven.eth";
+  color: rgb(249 250 251);
+  content: "/goto home";
   transition-duration: 5s;
 }

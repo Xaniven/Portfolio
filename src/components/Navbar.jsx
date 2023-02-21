@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className='flex items-center justify-between border-b border-purple-800 py-8 mx-3'>
       <a href='/'>
         <p className='lgWrap text-2xl ml-5 '>
-          <span className='lgSpan'>Hi, I'm Kody! 🙋🏽‍♂️</span>
+          <span className='lgSpan text-gray-50 hover:text-gray-50'>Hi, I'm Xaniven! 🙋🏽‍♂️</span>
         </p>
       </a>
       <div>
