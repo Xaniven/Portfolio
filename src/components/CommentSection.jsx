@@ -33,13 +33,12 @@ export default function CommentSection() {
       name: nm,
       text: msg,
       time: timestamp,
+      likes: 0,
     });
 
     setLoading(false);
     getComments();
-    //TODO:rebuild
-    //this will cause issue if 2 anon comments are made by same user, the second will have and empty string for username
-    nameRef.current.value = "";
+
     messageRef.current.value = "";
   }
 
@@ -97,6 +96,7 @@ export default function CommentSection() {
               name={coms.data.name}
               key={coms.id}
               t={coms.data.time.seconds}
+              likes={coms.data.likes}
             />
           ))}
           <div className='test text-center m-6'>
