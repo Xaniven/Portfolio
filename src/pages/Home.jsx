@@ -35,7 +35,7 @@ export default function Home() {
                   {" "}
                   Hey, Hi, Hello, <br />
                   Welcome to my website! ✨ <br /> HTML & CSS are the best programming languages, JS
-                  is for nerdz 😎 <br /> /s testing deploy on repoo change
+                  is for nerdz 😎 <br /> /s
                 </h2>
                 <p>
                   I am currently looking for entry level work or internship as a front end/fullstack
