@@ -11,10 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
-*.jpg
-*.svg
+
+
 *.pdf
-*.png
+
 firebase.json
 .firebaserc
 hosting.ZGlzdA.cache
