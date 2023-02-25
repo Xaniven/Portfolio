@@ -1,6 +1,6 @@
 import React from "react";
 import Skillscroll from "../components/Skillscroll";
-import baseImg from "../imgs/IMG-0364.jpg";
+import baseImg from "<ROOT>/vite-deploy/demo/imgs/IMG-0364.jpg";
 import secImg from "../imgs/IMG-0196.jpg";
 import { motion as M } from "framer-motion";
 
