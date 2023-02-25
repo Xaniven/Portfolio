@@ -2,7 +2,7 @@ import React from "react";
 import Skillscroll from "../components/Skillscroll";
 import baseImg from "../imgs/IMG-0364.jpg";
 import secImg from "../imgs/IMG-0196.jpg";
-import { delay, motion as M } from "framer-motion";
+import { motion as M } from "framer-motion";
 
 import img1 from "../imgs/bootstrap-logo.svg";
 import img2 from "../imgs/logo-logomark.svg";
