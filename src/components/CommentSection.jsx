@@ -97,6 +97,7 @@ export default function CommentSection() {
               key={coms.id}
               t={coms.data.time.seconds}
               likes={coms.data.likes}
+              id={coms.id}
             />
           ))}
           <div className='test text-center m-6'>
