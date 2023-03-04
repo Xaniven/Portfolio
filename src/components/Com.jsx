@@ -10,7 +10,7 @@ export default function Com(props) {
         <h2 className=' bg-gray-400 text-center p-2 border-2 border-purple-800  min-w-[30%] h-[100%]'>
           From: {props.name}
           <br />
-          Created at: {new Date(props.t * 1000).toLocaleString()}
+          Created at: {new Date(props.t.seconds * 1000).toLocaleString()}
         </h2>
       </div>
       <div className=' flex justify-between rounded-lg p-5 basis-10/12 bg-gray-300'>
