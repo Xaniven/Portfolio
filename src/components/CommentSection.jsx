@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { collection, getDocs, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, getDocs, addDoc, onSnapshot, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase";
 import Com from "./Com";
 
@@ -14,9 +14,20 @@ export default function CommentSection() {
     getComments();
   }, []);
 
-  // firebase call to get comments
+  // old firebase call to get comments
+  // function getComments() {
+  //   const querySnapshot = getDocs(collection(db, "commentDB")).then((response) => {
+  //     const r = response.docs.map((doc) => ({
+  //       data: doc.data(),
+  //       id: doc.id,
+  //     }));
+  //     setComments(r);
+  //   });
+  // }
+
+  //new firebase call, like count will now update on change
   function getComments() {
-    const querySnapshot = getDocs(collection(db, "commentDB")).then((response) => {
+    const querySnapshot = onSnapshot(collection(db, "commentDB"), (response) => {
       const r = response.docs.map((doc) => ({
         data: doc.data(),
         id: doc.id,
@@ -24,6 +35,7 @@ export default function CommentSection() {
       setComments(r);
     });
   }
+
   //add comment to db, call set comments to trigger useEffect, reset button load state
   //clear input fields
   async function addComment(nm, msg) {

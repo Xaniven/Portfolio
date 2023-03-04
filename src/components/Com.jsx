@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
-import { doc, updateDoc, increment } from "firebase/firestore";
+import { doc, updateDoc, increment, onSnapshot } from "firebase/firestore";
 import { db } from "./firebase";
 
 export default function Com(props) {
@@ -38,8 +38,12 @@ export default function Com(props) {
 
   async function updateLike(dir) {
     const likeRef = doc(db, "commentDB", props.id);
+    const unsub = onSnapshot(likeRef, (likeRef) => {
+      props.likes == likeRef.data().likes;
+    });
     try {
       await updateDoc(likeRef, { likes: increment(dir == "up" ? 1 : -1) });
+      unsub();
     } catch (error) {
       console.error("Error updating like:", error);
     }
