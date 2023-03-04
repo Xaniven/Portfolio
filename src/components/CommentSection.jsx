@@ -107,7 +107,7 @@ export default function CommentSection() {
               text={coms.data.text}
               name={coms.data.name}
               key={coms.id}
-              t={coms.data.time.seconds}
+              t={coms.data.time}
               likes={coms.data.likes}
               id={coms.id}
             />
