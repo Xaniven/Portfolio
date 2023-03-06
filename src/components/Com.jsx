@@ -8,13 +8,13 @@ export default function Com(props) {
     <div className=' lg:flex m-6 border-b-2 shadow-lg min-h-[10vh]  '>
       <div className='wrap'>
         <h2 className=' bg-gray-400 text-center p-2 border-2 border-purple-800  min-w-[30%] h-[100%]'>
-          From: {props.name}
+          From: {props.data.name}
           <br />
-          Created at: {new Date(props.t.seconds * 1000).toLocaleString()}
+          Created at: {new Date(props.data.time.seconds * 1000).toLocaleString()}
         </h2>
       </div>
       <div className=' flex justify-between rounded-lg p-5 basis-10/12 bg-gray-300'>
-        <p className=''> {props.text}</p>
+        <p className=' break-words'>{props.data.text}</p>
         <div className='likeSection flex-col justify-self-end text-center lg:m-4 '>
           <FaArrowUp
             className=' hover:text-purple-600 '
@@ -23,7 +23,7 @@ export default function Com(props) {
               updateLike("up");
             }}
           />
-          {props.likes}
+          {props.data.likes}
           <FaArrowDown
             className='hover:text-purple-600 '
             size='24px'
@@ -38,12 +38,8 @@ export default function Com(props) {
 
   async function updateLike(dir) {
     const likeRef = doc(db, "commentDB", props.id);
-    const unsub = onSnapshot(likeRef, (likeRef) => {
-      props.likes == likeRef.data().likes;
-    });
     try {
       await updateDoc(likeRef, { likes: increment(dir == "up" ? 1 : -1) });
-      unsub();
     } catch (error) {
       console.error("Error updating like:", error);
     }

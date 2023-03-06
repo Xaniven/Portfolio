@@ -103,14 +103,7 @@ export default function CommentSection() {
         </div>
         <div className='showComments w-full h-[50vh] mb-2 relative bottom-0 overflow-y-scroll'>
           {comments.map((coms) => (
-            <Com
-              text={coms.data.text}
-              name={coms.data.name}
-              key={coms.id}
-              t={coms.data.time}
-              likes={coms.data.likes}
-              id={coms.id}
-            />
+            <Com data={coms.data} key={coms.id} id={coms.id} />
           ))}
           <div className='test text-center m-6'>
             {comments.length == 0 ? "if you can see this, firebase limit is reached 😅" : ""}
