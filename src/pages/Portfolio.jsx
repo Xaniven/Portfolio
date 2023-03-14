@@ -7,19 +7,22 @@ import pdf3 from "../imgs/Coursera3.jpg";
 import pdf4 from "../imgs/Coursera4.jpg";
 import pdf5 from "../imgs/Coursera5.jpg";
 import npd from "../imgs/npd.jpg";
+import final from "../imgs/finished.jpg";
+import capstone from "../imgs/cps.jpg";
 
 export default function Portfolio() {
   document.title = " I Got Skillz";
   return (
     <M.div
-      initial={{ opacity: 0, x: "-100vw" }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: -1 }}
-      transition={{ type: "spring", stiffness: 200 }}
       className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 min-h-[75vh]'
     >
       <h1 className=' font-bold text-2xl mb-5'>Things I've worked on:</h1>
       <img src={npd} alt='' />
+
+      {/* refactor when finished, do it programticly  */}
       <section className=''>
         <M.details initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} open>
           <summary className=' text-2xl font-bold underline p-5 marker:text-purple-600'>
@@ -27,7 +30,15 @@ export default function Portfolio() {
           </summary>
           <div className='card-group mt-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3  gap-4'>
             <div className=' hover:scale-110 card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf} alt='' />
+              <img loading='lazy' className='card' src={final} alt='' />
+              <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
+                <p className=' opacity-100 bottom-[50%] h-[auto] text-sm lg:text-xl text-white font-extrabold'>
+                  Meta Front-end Developer
+                </p>
+              </div>
+            </div>
+            <div className=' hover:scale-110 card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
+              <img loading='lazy' className='card' src={pdf} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] text-sm lg:text-xl text-white font-extrabold'>
                   Programming With Javascript
@@ -35,7 +46,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf1} alt='' />
+              <img loading='lazy' className='card' src={pdf1} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Version Control
@@ -43,7 +54,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf5} alt='' />
+              <img loading='lazy' className='card' src={pdf5} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   HTML and CSS in depth
@@ -51,7 +62,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf2} alt='' />
+              <img loading='lazy' className='card' src={pdf2} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   React Basics
@@ -59,7 +70,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf4} alt='' />
+              <img loading='lazy' className='card' src={pdf4} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Advanced React
@@ -67,7 +78,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf3} alt='' />
+              <img loading='lazy' className='card' src={pdf3} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Introduction to Front-End Development
@@ -75,10 +86,18 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img className='card' src={pdf3} alt='' />
+              <img loading='lazy' className='card' src={pdf3} alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Principles of UX/UI Design
+                </p>
+              </div>
+            </div>
+            <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
+              <img loading='lazy' className='card' src={capstone} alt='' />
+              <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
+                <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
+                  Front-End Developer Capstone
                 </p>
               </div>
             </div>
