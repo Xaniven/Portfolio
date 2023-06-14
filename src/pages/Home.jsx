@@ -26,20 +26,19 @@ export default function Home() {
       >
         <div className='mb-20 pb-12 '>
           <h1 className=' text-center text-gray-50 font-extrabold text-2xl'>
-            Take A Look At This Hero Section!
+            Xaniven.eth, Web(3) Developer
           </h1>
           <div className='homeWrap flex lg:flex-row flex-col-reverse h-[100%] gap-6 m-8 '>
             <div className=' h-auto text-center textSection basis-2/3 bg-slate-200 p-6 rounded-xl drop-shadow-lg break-keep text-2xl'>
               <div className=''>
-                <h2>
-                  {" "}
-                  Hey, Hi, Hello, <br />
-                  Welcome to my website! ✨ <br /> HTML & CSS are the best programming languages, JS
-                  is for nerdz 😎 <br /> /s
-                </h2>
+                <h2 className=' italic font-bold'> Hey, Hi, Hello, Welcome to my website! ✨</h2>
+                <br />
                 <p>
-                  I am currently looking for entry level work or internship as a front end/fullstack
-                  develover!
+                  I am a 27/yo developer on the east coast US. I am currently avalible for hire or
+                  contract/freelance work. I can be contacted on any of the below platforms on the
+                  contact page of this site.
+                  <br />
+                  😊
                 </p>
 
                 <div className='linkWrap flex flex-row justify-evenly mt-16 bottom-0 gap-10'>
@@ -69,7 +68,7 @@ export default function Home() {
         <div className='spacer border-b border-purple-400 w-[80vw] self-center '></div>
         <div className='commentWrap'>
           <h3 className=' text-center text-gray-50 font-extrabold text-2xl'>
-            Comment section, because fullstack yo!
+            Leave a Comment, thought, or sh*t post 📈 below!
           </h3>
           <CommentSection />
         </div>

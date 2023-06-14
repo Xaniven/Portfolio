@@ -9,6 +9,7 @@ import pdf5 from "../imgs/Coursera5.jpg";
 import npd from "../imgs/npd.jpg";
 import final from "../imgs/finished.jpg";
 import capstone from "../imgs/cps.jpg";
+import andy from "../imgs/IMG-0179.png";
 
 export default function Portfolio() {
   document.title = " I Got Skillz";
@@ -19,12 +20,11 @@ export default function Portfolio() {
       exit={{ opacity: -1 }}
       className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 min-h-[75vh]'
     >
-      <h1 className=' font-bold text-2xl mb-5'>Things I've worked on:</h1>
       <img src={npd} alt='' />
 
       {/* refactor when finished, do it programticly  */}
       <section className=''>
-        <M.details initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} open>
+        <M.details initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
           <summary className=' text-2xl font-bold underline p-5 marker:text-purple-600'>
             Coursera Certificates 📜:{" "}
           </summary>
@@ -103,28 +103,55 @@ export default function Portfolio() {
             </div>
           </div>
         </M.details>
-        <details>
+        <details open>
           <summary className='mt-2 text-2xl font-bold underline p-5 marker:text-purple-600'>
-            Github Projects 🤖:
+            Web3 Projects 🤖:
           </summary>
           <div className='card-group mt-6 gap-4'>
             <div className='ghWrap min-h-[40vh] gap-4 flex lg:flex-row flex-col '>
               <div className=' lg:w-[60%] lg:mr-5 bg-slate-200 p-8 rounded-xl drop-shadow-lg break-keep'>
                 <p>
-                  I'm currently working on building a E-commernce site using Square Web Payments
-                  API. I have a CBD side project i'm working on and the commonly used Stripe API
-                  doesn't allow anything CBD related. I plan on releasing this as an open source
-                  template that others who have the same issue with Stripe that I did, after a lot
-                  of refactoring and a rebuild using tailwind instead of bootstrap. Note: in it's
-                  current state this is just me working to get a working prototype ASAP, I know the
-                  code is kind of ugly 😅
+                  'Andy Chill' is an ERC-1155 project. This project was built as a side project to
+                  help build my portfolio. It is based off an idea I got after minting a
+                  "Chilmeleon" nft. Discovering NFTs reignited my interest in coding and I soon
+                  started learning solidity to quickly realize unless I wanted to audit contracts
+                  and stuff I'd need to learn web development too.'
+                  <br />
+                  <span className='text-center p-2 block'>
+                    <span className=' font-bold text-xl'>This Projects Stack:</span>
+                    <br />
+                    <ul className='underline p-2'>
+                      <li>Vite</li>
+                      <li>Firebase</li>
+                      <li>HardHat</li>
+                      <li>Ethers.js</li>
+                      <li>OpenZeppelin/Contracts</li>
+                      <li>WalletConnect</li>
+                      <li>TailwindCSS</li>
+                      <li>Framer Motion</li>
+                    </ul>
+                  </span>
+                  <br />
+                  Project code can be found on github:{" "}
+                  <a
+                    className=' text-sky-600 underline hover:text-sky-400'
+                    href='https://github.com/Xaniven/andyChill'
+                  >
+                    {" "}
+                    Here
+                  </a>
+                  <br />
+                  The project can be viewed at{" "}
+                  <a
+                    className=' text-sky-600 underline hover:text-sky-400'
+                    href='https://andychill.art'
+                  >
+                    {" "}
+                    andychill.art
+                  </a>
                 </p>
               </div>
-              <iframe
-                className='lg:w-[40%] rounded-lg'
-                src='https://xaniven.github.io/firebase-practice/'
-                frameborder='0'
-              ></iframe>
+              <img className='lg:w-[40%] h-[20%] rounded-lg' src={andy} frameborder='0'></img>
             </div>
           </div>
         </details>
