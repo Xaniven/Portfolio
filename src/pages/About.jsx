@@ -1,6 +1,6 @@
 import React from "react";
 import { motion as M } from "framer-motion";
-import Skillscroll from "/../components/Skillscroll";
+import Skillscroll from "../components/Skillscroll";
 import baseImg from "/../imgs/IMG-0364.jpg";
 import secImg from "/../imgs/IMG-0196.jpg";
 import img1 from "/../imgs/bootstrap-logo.svg";
