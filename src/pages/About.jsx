@@ -1,20 +1,20 @@
 import React from "react";
 import { motion as M } from "framer-motion";
 import Skillscroll from "../components/Skillscroll";
-import baseImg from "/../imgs/IMG-0364.jpg";
-import secImg from "/../imgs/IMG-0196.jpg";
-import img1 from "/../imgs/bootstrap-logo.svg";
-import img2 from "/../imgs/logo-logomark.svg";
-import img3 from "/../imgs/React-icon.svg";
-import img4 from "/../imgs/tailwindcss.svg";
-import img5 from "/../imgs/js.svg";
-import img6 from "/../imgs/framer.svg";
-import img7 from "/../imgs/GraphQL_Logo.svg";
-import img8 from "/../imgs/Solidity_logo.svg";
-import img9 from "/../imgs/Nextjs-logo.svg";
-import img10 from "/../imgs/ts-lettermark-blue.svg";
-import img11 from "/../imgs/Moralis-LightBG-Logo.svg";
-import img12 from "/../imgs/Threejs-logo.svg";
+import baseImg from "../imgs/IMG-0364.jpg";
+import secImg from "../imgs/IMG-0196.jpg";
+import img1 from "../imgs/bootstrap-logo.svg";
+import img2 from "../imgs/logo-logomark.svg";
+import img3 from "../imgs/React-icon.svg";
+import img4 from "../imgs/tailwindcss.svg";
+import img5 from "../imgs/js.svg";
+import img6 from "../imgs/framer.svg";
+import img7 from "../imgs/GraphQL_Logo.svg";
+import img8 from "../imgs/Solidity_logo.svg";
+import img9 from "../imgs/Nextjs-logo.svg";
+import img10 from "../imgs/ts-lettermark-blue.svg";
+import img11 from "../imgs/Moralis-LightBG-Logo.svg";
+import img12 from "../imgs/Threejs-logo.svg";
 
 function About() {
   document.title = "About Me!";
