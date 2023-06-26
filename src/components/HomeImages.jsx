@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 
-import img1 from "../imgs/IMG-0430.png";
-import img2 from "../imgs/IMG-0429.png";
-import img3 from "../imgs/IMG-0423.png";
-import img4 from "../imgs/IMG-0424.png";
-import img5 from "../imgs/IMG-0425.png";
-import img6 from "../imgs/IMG-0427.png";
-import img7 from "../imgs/IMG-0420.png";
-import img8 from "../imgs/IMG-0435.png";
-import img9 from "../imgs/IMG-0426.png";
-
-const heroImgArray = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+const heroImgArray = [
+  "/imgs/IMG-0430.PNG",
+  "/imgs/IMG-0429.PNG",
+  "/imgs/IMG-0423.PNG",
+  "/imgs/IMG-0424.PNG",
+  "/imgs/IMG-0425.PNG",
+  "/imgs/IMG-0427.PNG",
+  "/imgs/IMG-0420.PNG",
+  "/imgs/IMG-0435.PNG",
+  "/imgs/IMG-0426.PNG",
+];
 
 export default function HomeImages() {
   const [imgIndex, setImgIndex] = useState(Math.floor(Math.random() * heroImgArray.length));
