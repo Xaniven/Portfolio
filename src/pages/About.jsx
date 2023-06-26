@@ -40,25 +40,25 @@ function About() {
         <h1 className=' font-bold text-2xl my-5 '>
           Hi, I'm Kody <br /> (Xaniven.eth){" "}
         </h1>
-        <p className='w-[75%] h-[auto] bg-slate-200 p-8 rounded-xl drop-shadow-lg break-keep'>
-          My name is Kody and I am a 26-year-old, self-taught front-end web developer. I am
-          currently expanding my skillset to become a full stack developer. I am a hardworking and
-          driven individual who is dedicated to constantly improving my skills and knowledge in the
-          field. I have a passion for web3 and crypto and am always looking to stay up to date on
-          the latest advancements in the industry. Currently, I am seeking entry-level front-end
-          work opportunities to gain more experience and continue to grow as a developer. I believe
-          that the key to success as a developer is to never stop learning and growing, and I take
-          this approach to heart in everything that I do. I have spent countless hours learning new
-          technologies, experimenting with different tools and frameworks, and honing my skills as a
-          developer. I am eager to take on new challenges and work with a team of experienced
-          professionals who can help me to further develop my skills and advance my career. My
-          long-term goal is to become a full stack developer and I am confident that with my skills
-          and experience, I will be able to make a significant impact in the world of web
-          development and help to shape the future of the internet.
+        <p className='w-[75%] h-[auto] bg-slate-200 p-8 rounded-xl drop-shadow-lg break-keep lg:text-lg font-semibold'>
+          I am a self-taught front-end web developer. I'm currently expanding my skillset to become
+          a proficient full stack developer. I am a hardworking and driven individual who is
+          dedicated to constantly improving my skills and knowledge in the field. I have a passion
+          for web3 and crypto and am always looking to stay up to date on the latest advancements in
+          the industry. Currently, I am seeking entry-level work or internship opportunities to gain
+          more experience to start a career in software development. I believe that the key to
+          success as a developer is to never stop learning or growing, and I take this approach to
+          heart in everything that I do. I have spent countless hours learning new technologies,
+          experimenting with different tools and frameworks, and honing my skills as a developer. I
+          am eager to take on new challenges and work with a team of experienced professionals who
+          can help me to further advance my skills. My long-term goal is to become a full stack
+          developer and I am confident that with my skills and drive, I will be able to make a
+          significant impact in the world of web development and help to shape the future of the
+          internet.
           <br />
-          (Totally not written by ChatGPT 😉)
+          (Totally didn't have ChatGPT help write this 😉)
         </p>
-        <h2 className=' font-bold text-xl '>Here are some things I know: </h2>
+        <h2 className=' font-bold text-xl '>Here are some things I know already: </h2>
         <M.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, when: "beforeChildren" }}
@@ -68,7 +68,7 @@ function About() {
           <Skillscroll imgArray={sVar} />
         </M.div>
 
-        <h3 className=' font-bold text-xl my-5'> Things I'm learning:</h3>
+        <h3 className=' font-bold text-xl my-5'>SOME of the things I'm learning:</h3>
         {/* spline, three, next, SQL, Solidity, typescript */}
         <M.div
           initial={{ opacity: -1 }}

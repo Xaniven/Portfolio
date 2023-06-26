@@ -27,15 +27,18 @@ export default function Home() {
         <div className='mb-20 pb-12 '>
           <div className='homeWrap flex lg:flex-row flex-col-reverse h-[100%] gap-6 m-8 '>
             <div className=' h-auto text-center textSection basis-2/3 bg-slate-200 p-6 rounded-xl drop-shadow-lg break-keep text-2xl'>
-              <div className=''>
-                <h1 className=' italic font-bold'> Hey, Hi, Hello, Welcome to my website! ✨</h1>
+              <div className=' flex flex-col justify-evenly h-[90%] '>
+                <h1 className=' italic font-bold drop-shadow-lg'>
+                  {" "}
+                  Hey, Hi, Hello, Welcome to my website! ✨
+                </h1>
                 <br />
-                <p>
-                  I am a 26/yo developer on the east coast US. I am currently avalible for hire or
-                  contract/freelance work. I can be contacted on any of the below platforms, or the
-                  contact page of this site.
+                <p className='drop-shadow-lg'>
+                  I am a 26/yo developer on the east coast US. I am currently available for hire or
+                  contract/freelance work. I can be contacted on any of the platforms below, or via
+                  the contact page of this site.
                   <br />
-                  😊
+                  Look Forward to hearing from you! 😁
                 </p>
 
                 <div className='linkWrap flex flex-row justify-evenly mt-16 bottom-0 gap-10'>
