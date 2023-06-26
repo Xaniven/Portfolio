@@ -1,15 +1,5 @@
 import React from "react";
 import { motion as M } from "framer-motion";
-import pdf from "../imgs/Coursera.png";
-import pdf1 from "../imgs/Coursera1.jpg";
-import pdf2 from "../imgs/Coursera2.jpg";
-import pdf3 from "../imgs/Coursera3.jpg";
-import pdf4 from "../imgs/Coursera4.jpg";
-import pdf5 from "../imgs/Coursera5.jpg";
-import npd from "../imgs/npd.jpg";
-import final from "../imgs/finished.jpg";
-import capstone from "../imgs/cps.jpg";
-import andy from "../imgs/IMG-0179.png";
 
 export default function Portfolio() {
   document.title = " I Got Skillz";
@@ -20,7 +10,7 @@ export default function Portfolio() {
       exit={{ opacity: -1 }}
       className='container flex flex-col justify-center items-center rounded-2xl border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 min-h-[75vh]'
     >
-      <img src={npd} alt='' />
+      <img src='/imgs/npd.jpg' alt='' />
 
       {/* refactor when finished, do it programticly  */}
       <section className=''>
@@ -30,7 +20,7 @@ export default function Portfolio() {
           </summary>
           <div className='card-group mt-5 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3  gap-4'>
             <div className=' hover:scale-110 card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={final} alt='' />
+              <img loading='lazy' className='card' src='imgs/finished.jpg' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] text-sm lg:text-xl text-white font-extrabold'>
                   Meta Front-end Developer
@@ -38,7 +28,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className=' hover:scale-110 card-wrap relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={pdf} alt='' />
+              <img loading='lazy' className='card' src='/imgs/Coursera.png' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] text-sm lg:text-xl text-white font-extrabold'>
                   Programming With Javascript
@@ -46,7 +36,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={pdf1} alt='' />
+              <img loading='lazy' className='card' src='/imgs/Coursera1.jpg' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Version Control
@@ -54,7 +44,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={pdf5} alt='' />
+              <img loading='lazy' className='card' src='/imgs/Coursera5.jpg' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   HTML and CSS in depth
@@ -62,7 +52,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={pdf2} alt='' />
+              <img loading='lazy' className='card' src='/imgs/Coursera2.jpg' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   React Basics
@@ -70,7 +60,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={pdf4} alt='' />
+              <img loading='lazy' className='card' src='/imgs/Coursera4.jpg' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Advanced React
@@ -78,7 +68,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={pdf3} alt='' />
+              <img loading='lazy' className='card' src='/imgs/Coursera3.jpg' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Introduction to Front-End Development
@@ -86,7 +76,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={pdf3} alt='' />
+              <img loading='lazy' className='card' src='/imgs/Coursera3.jpg' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Principles of UX/UI Design
@@ -94,7 +84,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className='card-wrap hover:scale-110 relative flex justify-center rounded-2xl overflow-hidden max-h-[400px]'>
-              <img loading='lazy' className='card' src={capstone} alt='' />
+              <img loading='lazy' className='card' src='/imgs/cps.jpg' alt='' />
               <div className='card-title flex items-center justify-center justify-items-center text-center absolute bottom-0 h-[20%] w-[100%] opacity-50 bg-black '>
                 <p className=' opacity-100 bottom-[50%] h-[auto] lg:text-xl text-white font-extrabold'>
                   Front-End Developer Capstone
@@ -151,7 +141,11 @@ export default function Portfolio() {
                   </a>
                 </p>
               </div>
-              <img className='lg:w-[40%] h-[20%] rounded-lg' src={andy} frameborder='0'></img>
+              <img
+                className='lg:w-[40%] h-[20%] rounded-lg'
+                src='/imgs/IMG-0179.PNG'
+                frameborder='0'
+              ></img>
             </div>
           </div>
         </details>
