@@ -6,10 +6,9 @@ export default function Contact() {
   document.title = "Get in Touch!";
   return (
     <M.div
-      initial={{ opacity: 0, x: "-100vw" }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: -1 }}
-      transition={{ type: "spring", stiffness: 200 }}
       className='container flex flex-col justify-center text-center items-center rounded-lg border-slate-900 border-4 bg-gray-400 mt-10 p-10 drop-shadow-xl px-5 w-[100%]'
     >
       <h1 className='  text-2xl font-extrabold mb-5 '>Get In Contact!</h1>
@@ -24,7 +23,6 @@ export default function Contact() {
             action='https://formsubmit.co/90d304ed0f6ab5c7c004216dc128e2f5'
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, x: 300 }}
             transition={{ type: "spring", stiffness: 200, delay: 0.6 }}
             className='flex flex-col border-2 border-black items-center p-5 gap-2 rounded-xl drop-shadow-xl mt-5 bg-gray-200 w-[100%] min-h-[500px]'
           >

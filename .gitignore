@@ -13,9 +13,8 @@ dist-ssr
 *.local
 
 
-*.pdf
 
-firebase.json
+
 .firebaserc
 hosting.ZGlzdA.cache
 
