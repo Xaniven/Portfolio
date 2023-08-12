@@ -2,27 +2,29 @@ import { useState } from "react";
 import { db } from "./firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
-const userEM = document.getElementById("email");
 const radioButtons = document.querySelectorAll('input[name="osSelect"]');
 
-async function addToBeta(em) {
-  let os;
-  const timestamp = serverTimestamp();
-  for (const radioButton of radioButtons) {
-    if (radioButton.checked) {
-      os = radioButton.value;
-      break;
+export default function Hippiechat() {
+  const [userEmail, setUserEmail] = useState("");
+
+  async function addToBeta(em) {
+    let hold = userEmail.toString();
+    let os;
+    const timestamp = serverTimestamp();
+    for (const radioButton of radioButtons) {
+      if (radioButton.checked) {
+        os = radioButton.value;
+        break;
+      }
     }
+
+    const docRef = await addDoc(collection(db, "BetaSignup"), {
+      email: userEmail,
+      platform: os,
+      time: timestamp,
+    });
   }
 
-  const docRef = await addDoc(collection(db, "BetaSignup"), {
-    email: em,
-    platform: os,
-    time: timestamp,
-  });
-}
-
-export default function Hippiechat() {
   document.title = "Hippie Chat Beta";
   return (
     <div className='container flex flex-col justify-center items-center text-center align-middle rounded-2xl border-slate-900 border-4 lg:mx-[250px] bg-gray-400 mt-10 py-10 drop-shadow-xl h-[69vh] w-full'>
@@ -32,7 +34,7 @@ export default function Hippiechat() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            addToBeta(userEM.value);
+            addToBeta();
           }}
           className='lg:h-[60%] h-[80%] flex flex-col justify-evenly '
         >
@@ -42,7 +44,10 @@ export default function Hippiechat() {
             className='lg:w-[30vw] w-[80%] border-2 border-black self-center p-2  rounded-xl'
             type='email'
             name='emailsign'
-            id='email'
+            id='emailEnter'
+            onChange={(e) => {
+              setUserEmail(e.target.value);
+            }}
           />
           <p className=' text-slate-500'>
             (Must be the email linked to your app store account for your respective platform)
