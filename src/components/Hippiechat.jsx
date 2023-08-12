@@ -2,14 +2,13 @@ import { useState } from "react";
 import { db } from "./firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
-const radioButtons = document.querySelectorAll('input[name="osSelect"]');
-
 export default function Hippiechat() {
+  const radioButtons = document.querySelectorAll('input[name="osSelect"]');
   const [userEmail, setUserEmail] = useState("");
   const [done, setDone] = useState(false);
 
   async function addToBeta(em) {
-    let hold = userEmail.toString();
+    let hold = userEmail;
     let os;
     const timestamp = serverTimestamp();
     for (const radioButton of radioButtons) {
@@ -18,18 +17,16 @@ export default function Hippiechat() {
         break;
       }
     }
-
     try {
       await addDoc(collection(db, "BetaSignup"), {
-        email: userEmail,
+        email: hold,
         platform: os,
         time: timestamp,
       });
+      setDone(true);
     } catch (error) {
       alert(error);
     }
-
-    setDone(true);
   }
 
   document.title = "Hippie Chat Beta";
