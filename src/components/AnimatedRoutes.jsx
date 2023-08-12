@@ -5,6 +5,7 @@ import Portfolio from "../pages/Portfolio";
 import Home from "../pages/Home";
 import { useLocation, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import Hippiechat from "./Hippiechat";
 
 export default function AnimatedRoutes() {
   const loca = useLocation();
@@ -15,6 +16,7 @@ export default function AnimatedRoutes() {
         <Route key={loca.pathname} path='/about' element={<About />} />
         <Route key={loca.pathname} path='/skillz' element={<Portfolio />} />
         <Route key={loca.pathname} path='/Contact' element={<Contact />} />
+        <Route key={loca.pathname} path='/Hippiechat' element={<Hippiechat />} />
       </Routes>
     </AnimatePresence>
   );
