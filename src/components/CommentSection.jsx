@@ -12,7 +12,7 @@ export default function CommentSection() {
   //Get comments on page load
   useEffect(() => {
     getComments();
-  }, []);
+  }, [addComment]);
 
   // old firebase call to get comments
   // function getComments() {
