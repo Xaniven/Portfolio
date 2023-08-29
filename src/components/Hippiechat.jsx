@@ -84,7 +84,7 @@ export default function Hippiechat() {
         <div className='container flex flex-col justify-center items-center text-center align-middle rounded-2xl border-slate-900 border-4 lg:mx-[250px] bg-gray-400 mt-10 py-10 drop-shadow-xl h-[69vh] w-full'>
           <div className=' bg-slate-300 lg:h-[40vh] h-full w-[80%] rounded-xl text-3xl p-4 '>
             <p className='mt-[10.5%]'>
-              Thank you For signing up, you will receive an email when the app is ready to download
+              Thank you for signing up, you will receive an email when the app is ready to download
               from the App Store!
             </p>
           </div>
